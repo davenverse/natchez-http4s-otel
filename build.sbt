@@ -29,7 +29,7 @@ val http4sV = "0.23.12"
 val natchezV = "0.1.6"
 val munitCatsEffectV = "1.0.7"
 
-val slf4jV    = "1.7.30"
+val slf4jV    = "1.7.36"
 
 
 // Projects
