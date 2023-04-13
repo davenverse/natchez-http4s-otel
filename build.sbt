@@ -15,7 +15,7 @@ ThisBuild / tlCiReleaseBranches := Seq("main")
 // true by default, set to false to publish to s01.oss.sonatype.org
 ThisBuild / tlSonatypeUseLegacyHost := true
 
-val Scala213 = "2.13.8"
+val Scala213 = "2.13.10"
 
 ThisBuild / crossScalaVersions := Seq("2.12.15", Scala213, "3.1.2")
 ThisBuild / scalaVersion := Scala213
