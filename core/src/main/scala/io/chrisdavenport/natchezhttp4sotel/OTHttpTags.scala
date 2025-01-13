@@ -129,6 +129,7 @@ object OTHttpTags {
       "Upgrade",
       "X-DNS-Prefetch-Control",
       "X-Request-Id",
+      "X-Correlation-Id"
 
       "Sec-CH-UA",
       "Sec-CH-UA-Arch",
