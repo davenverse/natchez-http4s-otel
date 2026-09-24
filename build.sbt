@@ -12,10 +12,7 @@ ThisBuild / developers := List(
 
 ThisBuild / tlCiReleaseBranches := Seq("main")
 
-// true by default, set to false to publish to s01.oss.sonatype.org
-ThisBuild / tlSonatypeUseLegacyHost := true
-
-ThisBuild / crossScalaVersions := Seq("2.12.18", "2.13.11", "3.3.0")
+ThisBuild / crossScalaVersions := Seq("2.12.18", "2.13.18", "3.3.0")
 ThisBuild / scalaVersion := "3.3.0"
 
 ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("17"))
@@ -85,4 +82,11 @@ lazy val examples = project.in(file("examples"))
 
 lazy val site = project.in(file("site"))
   .enablePlugins(TypelevelSitePlugin)
+  .settings(
+    laikaTheme := tlSiteHelium.value.site
+      .topNavigationBar(
+        homeLink = laika.helium.config.IconLink.internal(laika.ast.Path.Root / "index.md", laika.helium.config.HeliumIcon.home)
+      )
+      .build
+  )
   .dependsOn(core.jvm)
