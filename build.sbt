@@ -10,7 +10,7 @@ ThisBuild / developers := List(
   tlGitHubDev("christopherdavenport", "Christopher Davenport")
 )
 
-ThisBuild / tlCiReleaseBranches := Seq("main")
+ThisBuild / tlCiReleaseBranches := Seq()
 
 ThisBuild / crossScalaVersions := Seq("2.12.18", "2.13.18", "3.3.0")
 ThisBuild / scalaVersion := "3.3.0"
